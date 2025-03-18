@@ -38,8 +38,10 @@ const InvoiceForm: React.FC<InvoiceFormProps> = ({
         logoZoom={state.logoZoom}
         handleLogoZoomChange={handleLogoZoomChange}
       />
-      <CompanyInfo state={state} dispatch={dispatch} />
-      <ClientInfo state={state} dispatch={dispatch} />
+      <div className="grid grid-cols-2 gap-6"> {/* Grid container for side-by-side layout */}
+        <CompanyInfo state={state} dispatch={dispatch} />
+        <ClientInfo state={state} dispatch={dispatch} />
+      </div>
       <InvoiceDetails state={state} dispatch={dispatch} />
       <LineItems items={state.items} dispatch={dispatch} />
 
